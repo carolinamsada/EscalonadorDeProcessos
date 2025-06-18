@@ -45,11 +45,11 @@ void abrir_dialogo_adicionar_processo(GtkWidget *parent) {
 
     // Criação da janela de diálogo modal
     dialog = gtk_dialog_new_with_buttons("Adicionar Processo",
-                                         GTK_WINDOW(parent),
-                                         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                         "_Cancelar", GTK_RESPONSE_CANCEL,
-                                         "_Adicionar", GTK_RESPONSE_OK,
-                                         NULL);
+                                     GTK_WINDOW(gtk_widget_get_toplevel(parent)),
+                                     GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+                                     "_Cancelar", GTK_RESPONSE_CANCEL,
+                                     "_Adicionar", GTK_RESPONSE_OK,
+                                     NULL);
 
     content_area = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
 
@@ -227,7 +227,7 @@ void abrir_tela_selecao_algoritmo(GtkWidget *parent) {
     // Cria o diálogo como combo_box
     GtkWidget *dialog;
     dialog = gtk_dialog_new_with_buttons("Selecione o Algoritmo",
-                                         GTK_WINDOW(parent),
+                                         GTK_WINDOW(gtk_widget_get_toplevel(parent)),
                                          GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
                                          "_Cancelar", GTK_RESPONSE_CANCEL,
                                          "_Executar", GTK_RESPONSE_OK,

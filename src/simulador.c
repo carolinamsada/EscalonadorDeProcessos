@@ -295,7 +295,7 @@ void simular_prioridade(Processo *lista_processos, int n, char *output_buffer) {
 
     // Anexa resumo final ao output principal
     strcat(output_buffer, resumo_final);
-
+ 
     // Libera memória alocada dinamicamente
     free(tempo_restante);
     free(finalizado);
