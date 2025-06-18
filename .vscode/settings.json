@@ -1,0 +1,16 @@
+{
+  "terminal.integrated.profiles.windows": {
+    "MSYS2": {
+      "path": "C:\\msys64\\usr\\bin\\bash.exe",
+      "args": ["--login", "-i"]
+    },
+    "MinGW64": {
+      "path": "C:\\msys64\\mingw64.exe"
+    }
+  },
+"terminal.integrated.defaultProfile.windows": "MinGW64",
+"files.associations": {
+  "stdlib.h": "c",
+  "stdio.h": "c"
+}
+}

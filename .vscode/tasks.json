@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build EscalonadorDeProcessos",
+      "type": "shell",
+      "command": "mingw32-make",
+      "problemMatcher": "$gcc",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run EscalonadorDeProcessos in MSYS2",
+      "type": "shell",
+      "command": "start",
+      "args": [
+        "C:\\msys64\\usr\\bin\\mintty.exe",
+        "-e",
+        "/usr/bin/bash",
+        "-lc",
+        "'cd /c/Users/carolina/Documents/EscalonadorDeProcessos && ./EscalonadorDeProcessos'"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "dependsOn": "Build EscalonadorDeProcessos"
+    }
+  ]
+}
